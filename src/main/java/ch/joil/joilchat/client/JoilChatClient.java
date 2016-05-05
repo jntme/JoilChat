@@ -16,8 +16,12 @@ public class JoilChatClient {
 				DataOutputStream out= new DataOutputStream(socket.getOutputStream());
 				DataInputStream in= new DataInputStream(socket.getInputStream());
 				
+
 		//initialization
-				//System.out.println("Username: ");
+				String username = new String();
+				System.out.println("Username: ");
+				username = cmd_read();
+				out.writeUTF("<"+username+"> ");
 				
 
 		//messaging
@@ -25,6 +29,7 @@ public class JoilChatClient {
 				boolean done = false;
 				
 				while(!done){
+					System.out.print("<"+username+">");
 					input = cmd_read();
 					out.writeUTF(input);
 					out.flush();
@@ -50,7 +55,6 @@ public class JoilChatClient {
 
 	public static String cmd_read(){
 
-		System.out.println("Your Message: ");
    
 			try{
 	  		  BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
