@@ -1,4 +1,4 @@
-package ch.joil.joilchat.server;
+package serverOLD;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,7 +15,7 @@ public class StringUtil {
      * @param s the String
      * @return the reverted String
      */
-    static String reverseString(String s) {
+    public static String reverseString(String s) {
 
         String[] list = s.split(" ");
 

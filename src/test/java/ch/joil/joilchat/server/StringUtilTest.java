@@ -1,6 +1,7 @@
 package ch.joil.joilchat.server;
 
 import org.junit.Test;
+import serverOLD.StringUtil;
 
 import static org.junit.Assert.*;
 

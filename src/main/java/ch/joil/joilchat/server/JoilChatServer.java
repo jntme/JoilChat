@@ -10,11 +10,9 @@ import java.io.IOException;
 public class JoilChatServer {
 
     public static void main(String[] args) throws IOException {
-        System.out.println("Server started.");
-
-        GreetingServer server = new GreetingServer(7777);
-        server.run();
-
+        if(args.length != 1) System.out.println("Usage: java JoilChatServer <port>");
+        else {
+            new ChatServer(Integer.parseInt(args[0])).start();
+        }
     }
-
 }

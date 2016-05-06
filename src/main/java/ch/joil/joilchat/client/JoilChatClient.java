@@ -1,4 +1,4 @@
-
+package ch.joil.joilchat.client;
 /**
  * Created by ilian on 05/05/16.
  */
@@ -19,9 +19,9 @@ public class JoilChatClient {
 
 		//initialization
 				String username = new String();
-				System.out.println("Username: ");
+				System.out.print("Username: ");
 				username = cmd_read();
-				out.writeUTF("<"+username+"> ");
+				out.writeUTF("<"+username+">");
 				
 
 		//messaging
@@ -29,7 +29,7 @@ public class JoilChatClient {
 				boolean done = false;
 				
 				while(!done){
-					System.out.print("<"+username+">");
+					System.out.print("<"+username+"> ");
 					input = cmd_read();
 					out.writeUTF(input);
 					out.flush();
