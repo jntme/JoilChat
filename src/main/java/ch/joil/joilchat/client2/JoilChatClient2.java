@@ -8,7 +8,8 @@ public class JoilChatClient2 {
         if (args.length != 1) {
             System.out.println("Usage: java JoilChatClient <port>");
         } else {
-            new ChatClient2("localhost", 7777);
+            new ChatClient2("192.168.192.31", 7777);
         }
     }
 }
+

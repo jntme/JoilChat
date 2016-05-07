@@ -46,11 +46,10 @@ public class ChatClient2 implements Runnable {
     @Override
     public void run() {
         while (thread != null) {
+            // see https://docs.oracle.com/javase/7/docs/api/java/io/DataInputStream.html
+            BufferedReader d
+                    = new BufferedReader(new InputStreamReader(in));
             try {
-                // see https://docs.oracle.com/javase/7/docs/api/java/io/DataInputStream.html
-                BufferedReader d
-                        = new BufferedReader(new InputStreamReader(in));
-
                 out.writeUTF(d.readLine());
                 out.flush();
             } catch (IOException e) {
