@@ -4,7 +4,10 @@ import java.io.IOException;
 
 /**
  * The Mainclass of the Chatserver.
- * <p>
+ *
+ * see:
+ * pirate.shu.edu/~wachsmut/Teaching/CSAS2214/Virtual/Lectures/chat-client-server.html
+ *
  * Created by jnt on 05/05/16.
  */
 public class JoilChatServer {
