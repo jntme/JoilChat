@@ -12,3 +12,12 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
+
+task runApp(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+
+        main = 'ch.joil.joilchat.server2.JoilChatServer2'
+
+        // arguments to pass to the application
+        args '7777'
+}
