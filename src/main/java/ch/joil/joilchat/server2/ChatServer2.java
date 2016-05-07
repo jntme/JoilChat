@@ -42,15 +42,14 @@ public class ChatServer2 implements Runnable {
     }
 
     private void addThread(Socket socket) {
-        if(clientCount < clients.length) {
+        if (clientCount < clients.length) {
             System.out.println("Connection accepted: " + socket);
             clients[clientCount] = new ChatServerThread(this, socket);
 
             clients[clientCount].open();
             clients[clientCount].start();
             clientCount++;
-        }
-        else {
+        } else {
             System.out.println("Client Refused: Maximum count of connections reached (" + clients.length + ").");
             //// TODO: 06/05/16 add client informtion about not connection
         }
@@ -112,12 +111,7 @@ public class ChatServer2 implements Runnable {
 
             clientCount--;
 
-            try {
-                toTerminate.close();
-            } catch (IOException e) {
-                System.out.println("Could not close ClientServerThread: " + e.getMessage());
-            }
-
+            toTerminate.close();
             toTerminate.halt();
         }
     }
